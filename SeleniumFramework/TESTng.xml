@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+
+<listener class-name ="com.Listeners.MyTransformer"></listener>
+</listeners>
+  <test thread-count="5" name="SmokeTest">
+  <parameter name = "TestMethod" value="ParameterForTestMethod"/>
+  <parameter name = "DataproviderMethod" value="ParameterForDataProvider"/> 
+    <classes>
+      <class name="com.DemoQATests.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

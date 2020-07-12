@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.Listeners.MyTransformer"/>
+  </listeners>
+  <test thread-count="5" name="SmokeTest(failed)">
+    <parameter name="DataproviderMethod" value="ParameterForDataProvider"/>
+    <parameter name="TestMethod" value="ParameterForTestMethod"/>
+    <classes>
+      <class name="com.DemoQATests.HomePageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateListeners"/>
+          <include name="setupChrome"/>
+          <include name="tearDownReporter"/>
+          <include name="setUpReporter"/>
+        </methods>
+      </class> <!-- com.DemoQATests.HomePageTest -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
